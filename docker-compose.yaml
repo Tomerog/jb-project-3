@@ -33,3 +33,9 @@ services:
     ports:
       - 5173:80
     build: ./frontend
+
+  io:
+    container_name: vacations-io
+    ports:
+      - 3003:3003
+    build: ./io

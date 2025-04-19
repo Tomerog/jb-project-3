@@ -3,6 +3,8 @@ import Vacation from "../../models/vacation";
 import AppError from "../../errors/app-error";
 import { StatusCodes } from "http-status-codes";
 import User from "../../models/user";
+import socket from "../../io/io";
+import SocketMessages from "socket-enums-vacations-tomerogn";
 
 export async function getAllVacations(
   req: Request,
@@ -39,8 +41,12 @@ export async function addVacation(
   try {
     const newVacation = await Vacation.create({ ...req.body });
     res.json(newVacation);
+
+    socket.emit(SocketMessages.NEW_VACATION, {
+      from: req.headers['x-client-id'], 
+      data: newVacation
+  })
   } catch (e) {
-    // check if need to add validation error handler
     next(e);
   }
 }
@@ -87,8 +93,12 @@ export async function editVacation(
     await vacation.save();
 
     res.json(vacation);
+
+    socket.emit(SocketMessages.UPDATE_VACATION, {
+      from: req.headers['x-client-id'], 
+      data: vacation
+  })
   } catch (e) {
-    // check if need to add validation error handler
     next(e);
   }
 }
@@ -112,8 +122,12 @@ export async function removeVacation(
       );
 
     res.json({ success: true });
+
+    socket.emit(SocketMessages.DELETE_VACATION, {
+      from: req.headers['x-client-id'],
+      data: { id,}
+  })
   } catch (e) {
-    // check if need to add validation error handler
     next(e);
   }
 }

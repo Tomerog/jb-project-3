@@ -1,5 +1,13 @@
 {
     "db": {
         "host": "database"
+    },
+    "io": {
+        "url": "ws://io:3003"
+    },
+    "s3": {
+        "connection": {
+            "endpoint": "http://127.0.0.1:4566"
+        }
     }
 }

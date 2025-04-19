@@ -1,11 +1,11 @@
 import { createContext, PropsWithChildren, useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { useAppDispatch } from "../../redux/hooks";
-import { addComment, newPost } from "../../redux/profileSlice";
-import Post from "../../models/post/Post";
 import { v4 } from "uuid";
 import SocketMessages from "socket-enums-vacations-tomerogn";
-import Comment from "../../models/comment/Comment";
+import { addVacation, editVacation, followVacation, removeVacation, unfollowVacation } from "../../redux/vacationSlice";
+import Vacation from "../../models/vacation/Vacation";
+import User from "../../models/user/User";
 
 interface SocketContextInterface {
     xClientId: string
@@ -14,6 +14,7 @@ interface SocketContextInterface {
 export const SocketContext = createContext<SocketContextInterface>({
     xClientId: ''
 })
+
 
 export default function Io(props: PropsWithChildren): JSX.Element {
 
@@ -28,23 +29,39 @@ export default function Io(props: PropsWithChildren): JSX.Element {
         const socket = io(import.meta.env.VITE_IO_SERVER_URL)
 
         socket.onAny((eventName, payload) => {
-            // should we even respond?
-            // in other words:
-            // if this event was initiate by "us"
-            // then we should ignore it
-
-            console.log(eventName, payload)
 
             if (payload.from !== xClientId) {
                 switch (eventName) {
-                    case SocketMessages.NEW_POST:
-                        const newPostPayload = payload.data as Post
-                        dispatch(newPost(newPostPayload))
-                        break;
-                    case SocketMessages.NEW_COMMENT:
-                        const newCommentPayload = payload.data as Comment
-                        dispatch(addComment(newCommentPayload))
-                        break;
+                    case SocketMessages.NEW_VACATION:
+                        {
+                            const newVacationPayload = payload.data as Vacation
+                            dispatch(addVacation(newVacationPayload))
+                            break;
+                        }
+                    case SocketMessages.DELETE_VACATION:
+                        {
+                            const deleteVacationPayload = payload.data as { id: string }
+                            dispatch(removeVacation(deleteVacationPayload))
+                            break;
+                        }
+                    case SocketMessages.UPDATE_VACATION:
+                        {
+                            const updateVacationPayload = payload.data as Vacation
+                            dispatch(editVacation(updateVacationPayload))
+                            break;
+                        }
+                    case SocketMessages.FOLLOW:
+                        {
+                            const followVacationsPayload = payload.data as { vacationId: string, user: User }
+                            dispatch(followVacation(followVacationsPayload))
+                            break;
+                        }
+                    case SocketMessages.UNFOLLOW:
+                        {
+                            const unfollowVacationsPayload = payload.data as { vacationId: string, user: User }
+                            dispatch(unfollowVacation(unfollowVacationsPayload))
+                            break;
+                        }
                 }
             }
 
