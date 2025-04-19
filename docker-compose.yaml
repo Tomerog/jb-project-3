@@ -39,3 +39,20 @@ services:
     ports:
       - 3003:3003
     build: ./io
+
+  localstack:
+    container_name: localstack-vacations
+    ports:
+      - 127.0.0.1:4566:4566
+      - 127.0.0.1:4510-4559:4510-4559
+    image: localstack/localstack:latest
+    environment:
+      - SERVICES=s3
+      - DEBUG=1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+    volumes:
+      - "./localstack/init:/etc/localstack/init"
+      - "./localstack/images:/tmp/localstack-images"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    entrypoint: [ "/bin/sh", "-c", "chmod +x /etc/localstack/init/ready.d/init-aws.sh && exec docker-entrypoint.sh" ]

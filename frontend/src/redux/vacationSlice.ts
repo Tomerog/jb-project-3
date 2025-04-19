@@ -33,8 +33,12 @@ export const vacationsSlice = createSlice({
       );
       if (index > -1) {
         const vactionFollowers = state.vacations[index].followers;
+        const vacationImage = state.vacations[index].imageUrl
         state.vacations[index] = action.payload;
         state.vacations[index].followers = [...vactionFollowers];
+        if (state.vacations[index].imageUrl === undefined) {
+          state.vacations[index].imageUrl = vacationImage
+        }
       }
     },
     followVacation: (
