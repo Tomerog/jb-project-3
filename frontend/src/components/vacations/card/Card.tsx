@@ -85,34 +85,34 @@ export default function VacationCard({ vacation }: CardProps): JSX.Element {
         </Typography>
       </CardContent>
       <CardActions className="card-actions">
-  {isAdmin ? (
-    <>
-      <Button size="small" color="primary" className="card-button" onClick={editVacation}>
-        Edit
-      </Button>
-      <Button size="small" color="error" className="card-button" onClick={deleteVacation}>
-        Delete
-      </Button>
-    </>
-  ) : (
-    <>
-      <div className="follow-button-wrapper">
-        <Button
-          size="small"
-          variant={isFollowing ? "outlined" : "contained"}
-          color={isFollowing ? "secondary" : "primary"}
-          className="card-follow-button"
-          onClick={toggleFollow}
-          disabled={isFollowLoading}
-        >
-          {isFollowing ? "Unfollow" : "Follow"}
-        </Button>
-        {isFollowLoading && <span className="loading-spinner"><Loading/></span>}
-      </div>
-      {!isFollowLoading && <Typography className="card-follower-count">{followers.length} Followers</Typography>}
-    </>
-  )}
-</CardActions>
+        {isAdmin ? (
+          <>
+            <Button size="small" color="primary" className="card-button" onClick={editVacation}>
+              Edit
+            </Button>
+            <Button size="small" color="error" className="card-button" onClick={deleteVacation}>
+              Delete
+            </Button>
+          </>
+        ) : (
+          <>
+            <div className="follow-button-wrapper">
+              <Button
+                size="small"
+                variant={isFollowing ? "outlined" : "contained"}
+                color={isFollowing ? "secondary" : "primary"}
+                className="card-follow-button"
+                onClick={toggleFollow}
+                disabled={isFollowLoading}
+              >
+                {isFollowing ? "Unfollow" : "Follow"}
+              </Button>
+              {isFollowLoading && <span className="loading-spinner"><Loading /></span>}
+            </div>
+            {!isFollowLoading && <Typography className="card-follower-count">{followers.length} Followers</Typography>}
+          </>
+        )}
+      </CardActions>
 
     </Card>
   );

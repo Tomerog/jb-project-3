@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Apr 19, 2025 at 09:20 PM
+-- Generation Time: Apr 19, 2025 at 11:07 PM
 -- Server version: 9.2.0
 -- PHP Version: 8.2.27
 
@@ -41,6 +41,18 @@ CREATE TABLE `follows` (
 --
 
 INSERT INTO `follows` (`user_id`, `vacation_id`, `created_at`, `updated_at`) VALUES
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '0e8f48af-232f-4f4c-b63f-e25f04a5117b', '2025-04-19 23:07:05', '2025-04-19 23:07:05'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '29d25c2c-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:09', '2025-04-19 23:07:09'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee50db0-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:08', '2025-04-19 23:07:08'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee51362-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:06', '2025-04-19 23:07:06'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee514a0-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:07', '2025-04-19 23:07:07'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee51544-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:12', '2025-04-19 23:07:12'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee5165f-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:04', '2025-04-19 23:07:04'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee516cf-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:08', '2025-04-19 23:07:08'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee51712-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:07', '2025-04-19 23:07:07'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee51741-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:11', '2025-04-19 23:07:11'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee517ac-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:04', '2025-04-19 23:07:04'),
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', '5ee517d2-058e-11f0-95ef-0242ac110002', '2025-04-19 23:07:06', '2025-04-19 23:07:06'),
 ('8d12b84f-465a-4491-b4c3-40b74debcc9d', '29d25c2c-058e-11f0-95ef-0242ac110002', '2025-04-19 19:44:34', '2025-04-19 19:44:34'),
 ('8d12b84f-465a-4491-b4c3-40b74debcc9d', '5ee50db0-058e-11f0-95ef-0242ac110002', '2025-04-19 19:44:34', '2025-04-19 19:44:34'),
 ('8d12b84f-465a-4491-b4c3-40b74debcc9d', '5ee51362-058e-11f0-95ef-0242ac110002', '2025-04-19 12:39:59', '2025-04-19 12:39:59'),
@@ -94,6 +106,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `is_admin`, `created_at`, `updated_at`) VALUES
+('3a47882a-5757-411c-8b2d-0daed5dc43c7', 'test', 'test', 'test@gmail.com', '3bc8878e73e4a8ed1847f91b3fec96f025fe6e4854575bba13de8971de8f35a0', 0, '2025-04-19 23:07:01', '2025-04-19 23:07:01'),
 ('768be3ec-acba-4c86-96ad-80e8827285a5', 'cfir', 'kfir', 'timtum@tumtim.com', '3bc8878e73e4a8ed1847f91b3fec96f025fe6e4854575bba13de8971de8f35a0', 0, '2025-03-26 13:48:20', '2025-03-26 13:48:20'),
 ('8d12b84f-465a-4491-b4c3-40b74debcc9d', 'timtim', 'tumtum', 'tomer@boopbeep.com', '3bc8878e73e4a8ed1847f91b3fec96f025fe6e4854575bba13de8971de8f35a0', 0, '2025-03-21 17:43:40', '2025-03-21 17:43:40'),
 ('8e02ccee-0bcf-4369-a223-a8e752bb11ae', 'Admin', 'User', 'Admin@user.com', '7cb8f6d3768e4cb2adcc1232697b1284f6739fac04a0a6d2935b2bf9b50acdf4', 1, '2025-04-19 21:17:08', '2025-04-19 21:17:08'),
@@ -125,18 +138,18 @@ CREATE TABLE `vacations` (
 --
 
 INSERT INTO `vacations` (`id`, `destination`, `description`, `vacation_start`, `vacation_end`, `price`, `image_url`, `created_at`, `updated_at`) VALUES
-('0e8f48af-232f-4f4c-b63f-e25f04a5117b', 'South Tel-Aviv, Israel', 'If your budget is low and expectations are lower, south Tel-Aviv is your go to place', '2025-04-20 00:00:00', '2025-04-21 00:00:00', 4, 's3://il.co.johnbryce.tomerogn/santorini.webp', '2025-04-19 21:15:28', '2025-04-19 21:15:28'),
-('29d25c2c-058e-11f0-95ef-0242ac110002', 'Paris, France', 'Explore the City of Lights and its famous landmarks.', '2025-06-10 00:00:00', '2025-06-20 00:00:00', 1201, 's3://il.co.johnbryce.tomerogn/download.jpg', '2025-03-20 13:20:05', '2025-03-30 12:02:41'),
-('5ee50db0-058e-11f0-95ef-0242ac110002', 'Tokyo, Japan', 'Experience the blend of modern and traditional culture in Tokyo.', '2025-07-15 00:00:00', '2025-07-25 00:00:00', 1801, 's3://il.co.johnbryce.tomerogn/images-1.jpg', '2025-03-20 13:22:28', '2025-03-30 12:02:48'),
-('5ee51362-058e-11f0-95ef-0242ac110002', 'New York, USA', 'Discover the iconic skyline and diverse culture of NYC.', '2025-05-01 00:00:00', '2025-05-10 00:00:00', 1501, 's3://il.co.johnbryce.tomerogn/images.jpg', '2025-03-20 13:22:28', '2025-04-19 20:02:43'),
-('5ee514a0-058e-11f0-95ef-0242ac110002', 'Rome, Italy', 'Step into history and enjoy the amazing Italian cuisine.', '2025-09-10 00:00:00', '2025-09-20 00:00:00', 1350, 's3://il.co.johnbryce.tomerogn/florida-guide.jpg', '2025-03-20 13:22:28', '2025-03-30 12:02:58'),
-('5ee51544-058e-11f0-95ef-0242ac110002', 'Sydney, Australia', 'Visit the Opera House and relax on Bondi Beach.', '2025-11-05 00:00:00', '2025-11-15 00:00:00', 2101, 's3://il.co.johnbryce.tomerogn/download.jpg', '2025-03-20 13:22:28', '2025-03-30 12:03:09'),
-('5ee5165f-058e-11f0-95ef-0242ac110002', 'Dubai, UAE', 'Luxury shopping, ultramodern architecture, and vibrant nightlife.', '2025-04-10 00:00:00', '2025-04-20 00:00:00', 2500, 's3://il.co.johnbryce.tomerogn/images-1.jpg', '2025-03-20 13:22:28', '2025-04-14 13:18:54'),
-('5ee516cf-058e-11f0-95ef-0242ac110002', 'Bali, Indonesia', 'Relax in tropical paradise with stunning beaches.', '2025-08-15 00:00:00', '2025-08-25 00:00:00', 1100, 's3://il.co.johnbryce.tomerogn/images.jpg', '2025-03-20 13:22:28', '2025-03-30 12:02:52'),
-('5ee51712-058e-11f0-95ef-0242ac110002', 'London, UK', 'Enjoy a mix of history, culture, and modern attractions.', '2025-10-01 00:00:00', '2025-10-10 00:00:00', 1600, 's3://il.co.johnbryce.tomerogn/florida-guide.jpg', '2025-03-20 13:22:28', '2025-04-14 13:20:11'),
-('5ee51741-058e-11f0-95ef-0242ac110002', 'Cape Town, South Africa', 'Explore breathtaking landscapes and unique wildlife.', '2025-12-05 00:00:00', '2025-12-15 00:00:00', 1401, 's3://il.co.johnbryce.tomerogn/santorini.webp', '2025-03-20 13:22:28', '2025-03-30 12:04:15'),
-('5ee517ac-058e-11f0-95ef-0242ac110002', 'Bangkok, Thailand', 'Discover exotic street food and beautiful temples.', '2025-03-28 00:00:00', '2025-03-31 00:00:00', 901, 's3://il.co.johnbryce.tomerogn/download.jpg', '2025-03-20 13:22:28', '2025-04-19 20:03:19'),
-('5ee517d2-058e-11f0-95ef-0242ac110002', 'Athens, Greece', 'Walk through ancient ruins and enjoy stunning sunsets.', '2025-04-22 00:00:00', '2025-07-10 00:00:00', 1300, 's3://il.co.johnbryce.tomerogn/images-1.jpg', '2025-03-20 13:22:28', '2025-04-14 11:55:00');
+('0e8f48af-232f-4f4c-b63f-e25f04a5117b', 'South Tel-Aviv, Israel', 'If your budget is low and expectations are lower, south Tel-Aviv is your go to place', '2025-04-20 00:00:00', '2025-04-21 00:00:00', 4, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/d7e5c167-f851-415d-838a-dcd329ba134d.jpg', '2025-04-19 21:15:28', '2025-04-19 23:00:23'),
+('29d25c2c-058e-11f0-95ef-0242ac110002', 'Paris, France', 'Explore the City of Lights and its famous landmarks.', '2025-06-10 00:00:00', '2025-06-20 00:00:00', 1201, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/0bfdd272-de1c-46cd-ae2f-f28296370425.png', '2025-03-20 13:20:05', '2025-04-19 23:05:29'),
+('5ee50db0-058e-11f0-95ef-0242ac110002', 'Tokyo, Japan', 'Experience the blend of modern and traditional culture in Tokyo.', '2025-07-15 00:00:00', '2025-07-25 00:00:00', 1801, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/678dc2fc-dd24-40a8-8f5b-338906e37429.png', '2025-03-20 13:22:28', '2025-04-19 23:05:33'),
+('5ee51362-058e-11f0-95ef-0242ac110002', 'New York, USA', 'Discover the iconic skyline and diverse culture of NYC.', '2025-05-01 00:00:00', '2025-05-10 00:00:00', 1501, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/d06da886-5790-433e-b99c-a1e0d8e3d0db.jpg', '2025-03-20 13:22:28', '2025-04-19 23:05:25'),
+('5ee514a0-058e-11f0-95ef-0242ac110002', 'Rome, Italy', 'Step into history and enjoy the amazing Italian cuisine.', '2025-09-10 00:00:00', '2025-09-20 00:00:00', 1350, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/54c593e8-6070-45d3-8a31-029fc4dd1c0a.png', '2025-03-20 13:22:28', '2025-04-19 23:05:41'),
+('5ee51544-058e-11f0-95ef-0242ac110002', 'Sydney, Australia', 'Visit the Opera House and relax on Bondi Beach.', '2025-11-05 00:00:00', '2025-11-15 00:00:00', 2101, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/814bf5fe-ef48-4f17-ab0a-a2ad915e1b51.png', '2025-03-20 13:22:28', '2025-04-19 23:05:56'),
+('5ee5165f-058e-11f0-95ef-0242ac110002', 'Dubai, UAE', 'Luxury shopping, ultramodern architecture, and vibrant nightlife.', '2025-04-10 00:00:00', '2025-04-20 00:00:00', 2500, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/8e3c1205-b35f-482e-bc7d-eadd14030c3a.png', '2025-03-20 13:22:28', '2025-04-19 23:05:20'),
+('5ee516cf-058e-11f0-95ef-0242ac110002', 'Bali, Indonesia', 'Relax in tropical paradise with stunning beaches.', '2025-08-15 00:00:00', '2025-08-25 00:00:00', 1100, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/5cb42e26-bf58-4c36-a75c-b515dc09c785.jpg', '2025-03-20 13:22:28', '2025-04-19 23:05:37'),
+('5ee51712-058e-11f0-95ef-0242ac110002', 'London, UK', 'Enjoy a mix of history, culture, and modern attractions.', '2025-10-01 00:00:00', '2025-10-10 00:00:00', 1600, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/f3219086-3870-4dd8-80e0-a00b9b7d9812.png', '2025-03-20 13:22:28', '2025-04-19 23:05:45'),
+('5ee51741-058e-11f0-95ef-0242ac110002', 'Cape Town, South Africa', 'Explore breathtaking landscapes and unique wildlife.', '2025-12-05 00:00:00', '2025-12-15 00:00:00', 1401, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/54dab4e9-8e03-4873-8649-6cbab9e6e374.png', '2025-03-20 13:22:28', '2025-04-19 23:05:51'),
+('5ee517ac-058e-11f0-95ef-0242ac110002', 'Bangkok, Thailand', 'Discover exotic street food and beautiful temples.', '2025-03-28 00:00:00', '2025-03-31 00:00:00', 900, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/cb6bd074-56ae-4d45-af3d-7fee33a22436.jpg', '2025-03-20 13:22:28', '2025-04-19 23:06:26'),
+('5ee517d2-058e-11f0-95ef-0242ac110002', 'Athens, Greece', 'Walk through ancient ruins and enjoy stunning sunsets.', '2025-04-22 00:00:00', '2025-07-10 00:00:00', 1300, 'http://127.0.0.1:4566/il.co.johnbryce.tomerogn/d29cfc1e-7faa-4f55-99e6-dfc17fa14bc5.png', '2025-03-20 13:22:28', '2025-04-19 23:05:14');
 
 --
 -- Indexes for dumped tables
