@@ -67,7 +67,7 @@ export default function VacationCard({ vacation }: CardProps): JSX.Element {
       <CardMedia
         component="img"
         className="card-media"
-        image={imageUrl}
+        image={`${import.meta.env.VITE_AWS_SERVER_URL}/${imageUrl}`}
         alt={destination}
       />
       <CardContent className="card-content">
