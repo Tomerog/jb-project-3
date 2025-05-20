@@ -21,7 +21,7 @@ export async function start() {
 
     await createAppBucketIfNotExist();
 
-    app.use(cors());
+   app.use(cors());
 
     app.use(json());
     app.use(fileUpload());

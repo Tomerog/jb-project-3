@@ -138,7 +138,7 @@ CREATE TABLE `vacations` (
 --
 
 INSERT INTO `vacations` (`id`, `destination`, `description`, `vacation_start`, `vacation_end`, `price`, `image_url`, `created_at`, `updated_at`) VALUES
-('0e8f48af-232f-4f4c-b63f-e25f04a5117b', 'South Tel-Aviv, Israel', 'If your budget is low and expectations are lower, south Tel-Aviv is your go to place', '2025-04-20 00:00:00', '2025-04-21 00:00:00', 4, 'il.co.johnbryce.tomerogn/Barcelona.jpg', '2025-04-19 21:15:28', '2025-04-19 23:00:23'),
+('0e8f48af-232f-4f4c-b63f-e25f04a5117b', 'South Tel-Aviv, Israel', 'If your budget is low and expectations are lower, south Tel-Aviv is your go to place', '2025-04-20 00:00:00', '2025-04-21 00:00:00', 469, 'il.co.johnbryce.tomerogn/Barcelona.jpg', '2025-04-19 21:15:28', '2025-04-19 23:00:23'),
 ('29d25c2c-058e-11f0-95ef-0242ac110002', 'Paris, France', 'Explore the City of Lights and its famous landmarks.', '2025-06-10 00:00:00', '2025-06-20 00:00:00', 1201, 'il.co.johnbryce.tomerogn/budapest.webp', '2025-03-20 13:20:05', '2025-04-19 23:05:29'),
 ('5ee50db0-058e-11f0-95ef-0242ac110002', 'Tokyo, Japan', 'Experience the blend of modern and traditional culture in Tokyo.', '2025-07-15 00:00:00', '2025-07-25 00:00:00', 1801, 'il.co.johnbryce.tomerogn/hadera.jpg', '2025-03-20 13:22:28', '2025-04-19 23:05:33'),
 ('5ee51362-058e-11f0-95ef-0242ac110002', 'New York, USA', 'Discover the iconic skyline and diverse culture of NYC.', '2025-05-01 00:00:00', '2025-05-10 00:00:00', 1501, 'il.co.johnbryce.tomerogn/machu-picchu.jpg', '2025-03-20 13:22:28', '2025-04-19 23:05:25'),
