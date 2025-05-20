@@ -7,7 +7,7 @@
     },
     "s3": {
         "connection": {
-            "endpoint": "localstack:4566"
+            "endpoint": "http://localstack:4566"
         }
     }
 }
