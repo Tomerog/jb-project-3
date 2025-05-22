@@ -1,0 +1,46 @@
+.chartContainer {
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: block;
+    margin-top:10%;
+}
+
+.download-btn {
+    background-color: transparent;  
+    color: #333; 
+    border: none;  
+    padding: 0;  
+    font-size: 18px;  
+    font-weight: bold;  
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: color 0.3s;
+}
+
+.download-btn:hover {
+    color: #007bff;  
+}
+
+.adminContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+.adminContainer a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.adminContainer a:hover {
+    color: #007bff;
+}
